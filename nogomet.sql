@@ -37,7 +37,7 @@ iskustvogodina int
 );
 
 create table utakmice(
-sifra int not null references klubovi(sifra),
+sifra int not null,
 datum date not null,
 vrijeme time not null,
 lokacija varchar,
