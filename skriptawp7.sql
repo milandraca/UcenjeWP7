@@ -1,8 +1,7 @@
-﻿--create database edunovawp7;
+﻿-- Ovako se pišu komentari
 
 use master;
 go
-
 drop database if exists edunovawp7;
 go
 create database edunovawp7;
@@ -10,17 +9,14 @@ go
 use edunovawp7;
 go
 
---use edunovawp7;
-
 create table smjerovi(
 sifra int,
-naziv varchar (50),
+naziv varchar(50),
 trajanje int,
 cijena decimal(18,2),
 vaucer bit,
 izvodiseod datetime
 );
-
 
 create table polaznici(
 sifra int,
@@ -37,7 +33,8 @@ smjer int,
 predavac varchar(50)
 );
 
+
 create table clanovi(
-grupa int,
+grupa int ,
 polaznik int
 );
