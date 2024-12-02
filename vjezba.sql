@@ -11,16 +11,16 @@ go
 
 
 create table ispitnirok(
-sifra int,
-predmet varchar(50),
+sifra int not null primary key identity(1,1),
+predmet varchar(50) not null,
 vrstaIspita varchar(50),
 datum datetime,
-pristupio bit
+pristupio bit not null
 );
 
 create table pristupnici(
-ispitnirok bit,
-student varchar(50),
+ispitnirok int not null references ispitnirok(sifra),
+student varchar(50) not null,
 brojbodova int,
 ocijena int
 );
