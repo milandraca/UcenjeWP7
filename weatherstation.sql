@@ -1,3 +1,6 @@
+use master;
+go
+
 drop database if exists weatherstation;
 go
 create database weatherstation;
@@ -14,21 +17,20 @@ naziv varchar(50) not null
 create table regija(
 sifra int not null primary key identity(1,1),
 naziv int not null references drzava(sifra),
-drzava varchar(50) not null
+drzava int not null references drzava(sifra)
 );
 
 create table mjesto(
 sifra int not null primary key identity(1,1),
-naziv varchar(20) not null,
-brojposte varchar not null ,
-drzava int not null references regija(sifra),
+naziv varchar(30) not null,
+brojposte int not null ,
 regija varchar (50)
 );
 
-create table meteostanica(
+create table meteostanica( 
 sifra int not null,
+naziv varchar (50),
 brzinavjetra int,
-latitude DECIMAL(9,6),
 longitude DECIMAL(9,6),
 temperatura decimal(3,1) ,
 relativnavlaga decimal(4,2),
