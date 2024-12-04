@@ -16,7 +16,7 @@ naziv varchar(50) not null
 );
 
 create table regija(
-sifra int not null,
+sifra int not null primary key identity(1,1),
 naziv int not null references drzava(sifra),
 drzava varchar(50) not null
 );
@@ -25,6 +25,16 @@ create table mjesto(
 sifra int not null primary key identity(1,1),
 naziv varchar(20) not null,
 brojposte varchar not null ,
-drzava varchar(50)  primary key identity(1,1),
-regija varchar (50) references regija(sifra)
+drzava int not null references regija(sifra),
+regija varchar (50)
+);
+
+create table meteostanica(
+sifra int not null,
+brzinavjetra int,
+temperatura decimal(3,1) ,
+relativnavlaga decimal(4,2),
+kolicinapadalinadan decimal(4,2),
+kolicinapadalinamjesec decimal(5,2),
+mjesto int references mjesto(sifra)
 );
