@@ -32,6 +32,8 @@ regija varchar (50)
 create table meteostanica(
 sifra int not null,
 brzinavjetra int,
+latitude DECIMAL(9,6),
+longitude DECIMAL(9,6),
 temperatura decimal(3,1) ,
 relativnavlaga decimal(4,2),
 kolicinapadalinadan decimal(4,2),
