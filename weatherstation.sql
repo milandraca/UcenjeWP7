@@ -1,12 +1,8 @@
-use edunovawp7;
-
-select * from smjerovi;
+drop database if exists weatherstation;
 go
-drop database if exists edunovawp7;
+create database weatherstation;
 go
-create database edunovawp7;
-go
-use edunovawp7;
+use weatherstation;
 go
 
 
