@@ -3,7 +3,7 @@ go
 
 drop database if exists weatherstation;
 go
-create database weatherstation;
+create database weatherstation collate Croatian_CI_AS;
 go
 use weatherstation;
 go
@@ -30,6 +30,7 @@ regija int  not null references regija(sifra)
 create table meteostanica( 
 sifra int not null primary key identity(1,1),
 naziv varchar (50) not null,
+vrijeme datetime not null,
 brzinavjetra int,
 longitude DECIMAL(9,6),
 latitude DECIMAL(9,6),
@@ -38,6 +39,14 @@ relativnavlaga decimal(4,2),
 kolicinapadalinadan decimal(4,2),
 kolicinapadalinamjesec decimal(5,2),
 mjesto int not null references mjesto(sifra)
+);
+
+create table podaci( 
+sifra int not null references meteostanica(sifra),
+brzinavjetra int,
+temperatura decimal(3,1) ,
+relativnavlaga decimal(4,2),
+kolicinapadalina decimal(4,2)
 );
 
 
@@ -63,11 +72,14 @@ insert into mjesto(naziv, brojposte, regija) values
 ('Novi Sad',null, 2);
 
 
-insert into meteostanica (naziv, brzinavjetra, longitude, latitude, temperatura, relativnavlaga, kolicinapadalinadan, kolicinapadalinamjesec, mjesto) 
+insert into meteostanica (naziv, vrijeme, brzinavjetra, longitude, latitude, temperatura, relativnavlaga, kolicinapadalinadan, kolicinapadalinamjesec, mjesto) 
 values 
 ('GW1101', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1),
 ('WH2650A', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2),
 ('GW2001', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1);
+
+insert into podaci(brzinavjetra, temperatura, relativnavlaga, kolicinapadalina) values
+('meteo', null, null, null, null)
 
 
 select * from meteostanica;
