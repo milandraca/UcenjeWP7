@@ -36,7 +36,7 @@ mjesto int not null references mjesto(sifra)
 );
 
 create table podaci( 
-id bigint IDENTITY(1,1) NOT NULL,
+id bigint identity(1,1) not null,
 meteostanica_sifra int not null references meteostanica(sifra),
 vrijeme datetime not null,
 brzinavjetra int,
@@ -79,4 +79,6 @@ insert into podaci(sifra, vrijeme, brzinavjetra, temperatura, relativnavlaga, ko
 
 
 -- select * from meteostanica;
+
+-- ovo je skripta koju sam napravio za to
 
