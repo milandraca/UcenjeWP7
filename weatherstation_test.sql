@@ -36,7 +36,7 @@ mjesto int not null references mjesto(sifra)
 );
 
 create table podaci( 
-id bigint IDENTITY(1,1) NOT NULL,
+id bigint identity(1,1) not null,
 meteostanica_sifra int not null references meteostanica(sifra),
 vrijeme datetime not null,
 brzinavjetra int,
@@ -75,8 +75,10 @@ values
 ('GW2001', NULL, NULL, 1);
 
 insert into podaci(sifra, vrijeme, brzinavjetra, temperatura, relativnavlaga, kolicinapadalina) values
-(1, getDate(),  null, null, null, null)
+(1, '2024-12-06 10:00:00',  null, null, null, null)
 
 
 -- select * from meteostanica;
+
+-- ovo je skripta koju sam napravio za to
 
