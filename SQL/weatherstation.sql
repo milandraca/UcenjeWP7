@@ -74,7 +74,7 @@ values
 ('GW2001', NULL, NULL, 1);
 
 insert into podaci(sifra, vrijeme, brzinavjetra, temperatura, relativnavlaga, kolicinapadalina) values
-(1, '2024-12-06 10:00:00',  null, null, null, null)
+(1, getDate(),  null, null, null, null)
 
 
 -- select * from meteostanica;
