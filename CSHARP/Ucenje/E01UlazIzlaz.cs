@@ -8,18 +8,20 @@ namespace Ucenje
 {
     internal class E01UlazIzlaz
     {
-        
+
         public static void Izvedi()
         {
-            // ovdje pisemo kod
-            // izlaz
+
+
+            // ovdje pišemo kod
+            // Izlaz
             Console.WriteLine("Pozdrav svijetu!");
 
             Console.Write("Ovo je u liniji ");
-            Console.WriteLine("Ovo je u istoj liniji ali nakon ispisa ode u novu liniju");
-            Console.WriteLine("Ovo nije u istoj liniji");
+            Console.WriteLine("ovo je u istoj liniji ali nakon ispisa ode u novu liniju");
 
-            Console.WriteLine("1. red\n2.red\tnakon taba");
+            Console.WriteLine("1. red\n2. red\tnakon taba");
+
 
             Console.WriteLine(1);
             Console.WriteLine(true);
@@ -27,25 +29,22 @@ namespace Ucenje
 
 
 
-            //ulaz
-
+            // Ulaz
             int i;
             Console.Write("Unesi cijeli broj: ");
             i = int.Parse(Console.ReadLine());
 
+            // izlaz
             Console.WriteLine("Unio si {0}",i);
 
 
+
             // Ulaz
-            Console.Write("Unesi ime grada ");
+            Console.Write("Unesi ime grada: ");
             string grad = Console.ReadLine();
 
-            // Izlaz
+            // izlaz
             Console.WriteLine("Unio si " + grad);
-
-
-
-
 
 
         } // kraj metoda
@@ -53,11 +52,5 @@ namespace Ucenje
 
 
 
-
-
-
-
-
-
-    } //kraj klasa
-} //kraj namespace
+    }// kraj klasa
+} // kraj namespace
