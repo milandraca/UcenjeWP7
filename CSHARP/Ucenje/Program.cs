@@ -4,7 +4,12 @@
 
 using Ucenje;
 
-zadaca02.Zbroj();
+
+
+
+zadaca03.Pozitiv();
+
+//zadaca02.Zbroj();
 
 
 //E13Z2.Izvedi();
