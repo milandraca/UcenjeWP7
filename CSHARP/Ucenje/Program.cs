@@ -4,7 +4,7 @@
 
 using Ucenje;
 
-E13Z2.Izvedi();
+//E13Z2.Izvedi();
 
 //E13TryCatch.Izvedi();
 
@@ -45,3 +45,5 @@ E13Z2.Izvedi();
 
 
 //Console.WriteLine("Hello, World!");
+
+zadaca01.pravokutnik();
