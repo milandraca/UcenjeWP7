@@ -4,6 +4,9 @@
 
 using Ucenje;
 
+zadaca02.Zbroj();
+
+
 //E13Z2.Izvedi();
 
 //E13TryCatch.Izvedi();
@@ -46,4 +49,4 @@ using Ucenje;
 
 //Console.WriteLine("Hello, World!");
 
-zadaca01.pravokutnik();
+//zadaca01.pravokutnik();
