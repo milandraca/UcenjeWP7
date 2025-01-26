@@ -4,10 +4,10 @@
 
 using Ucenje;
 
+GeneratorLozinki.Izvedi();
 
 
-
-zadaca03.Pozitiv();
+//zadaca03.Pozitiv();
 
 //zadaca02.Zbroj();
 
